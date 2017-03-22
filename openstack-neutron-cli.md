@@ -152,7 +152,7 @@ openstack network create private --project tenantA --internal
 
 openstack subnet create sub_private_tenantA --project tenantA \
     --network private --allocation-pool start=10.0.0.100,end=10.0.0.199 \
-    --subnet-range 10.0.0.0/24
+    --dns-nameserver 8.8.8.8 --dns-nameserver 8.8.4.4 --subnet-range 10.0.0.0/24
 +-------------------+--------------------------------------+
 | Field             | Value                                |
 +-------------------+--------------------------------------+
