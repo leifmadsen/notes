@@ -84,7 +84,9 @@ openstack network create public --external --provider-network-type vlan \
 | tags                      | []                                   |
 | updated_at                | 2017-03-22T18:00:04Z                 |
 +---------------------------+--------------------------------------+
+```
 
+```
 openstack subnet create sub_public --network public --dhcp \
     --allocation-pool start=192.168.10.64,end=192.168.10.127 \
     --gateway 192.168.10.1 --subnet-range 192.168.10.0/24
@@ -149,7 +151,9 @@ openstack network create private --project tenantA --internal
 | tags                      | []                                   |
 | updated_at                | 2017-03-22T18:06:02Z                 |
 +---------------------------+--------------------------------------+
+```
 
+```
 openstack subnet create sub_private_tenantA --project tenantA \
     --network private --allocation-pool start=10.0.0.100,end=10.0.0.199 \
     --dns-nameserver 8.8.8.8 --dns-nameserver 8.8.4.4 --subnet-range 10.0.0.0/24
@@ -194,6 +198,7 @@ openstack network list ; openstack subnet list
 | 401d2b34-b223-46b2-b83e-32bb884d41e6 | sub_private_tenantA | 0ed133ce-d162-432c-9724-127a7130865d | 10.0.0.0/24     |
 | 7186f884-ad8e-4f0a-97db-2b63df6ebf5d | sub_public          | 5d6b7a6e-ca1a-46d9-860f-32b07748ca29 | 192.168.10.0/24 |
 +--------------------------------------+---------------------+--------------------------------------+-----------------+
+```
 
 # Routing
 
@@ -309,8 +314,8 @@ openstack flavor list
 # Get User `openrc` File
 
 The following commands will be run as the user we created earlier. Login to the
-Horizon dasboard, Select Project > Compute > Access & Security > API Access >
-Download OpenStack RC File v2.0
+Horizon dasboard, Select `Project > Compute > Access & Security > API Access >
+Download OpenStack RC File v2.0`
 
 Download the file, and then source it so that you can authenticate to the cloud
 as a project user.
