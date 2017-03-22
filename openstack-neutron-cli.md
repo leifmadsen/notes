@@ -178,8 +178,9 @@ openstack subnet create sub_private_tenantA --project tenantA \
 | subnetpool_id     | None                                 |
 | updated_at        | 2017-03-22T18:07:28Z                 |
 +-------------------+--------------------------------------+
+```
 
-
+```
 openstack network list ; openstack subnet list
 +--------------------------------------+---------+--------------------------------------+
 | ID                                   | Name    | Subnets                              |
@@ -201,6 +202,7 @@ floating IPs.
 
 ## Create router
 
+```
 openstack router create --project tenantA provider
 +-------------------------+--------------------------------------+
 | Field                   | Value                                |
