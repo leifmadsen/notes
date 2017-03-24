@@ -52,7 +52,7 @@ network) because I used `single-nic-vlans` deployment with `network-isolation`.
 
 ```
 openstack network create public --external --provider-network-type vlan \
-    --provider-physical-network datacentre --provider-segment 10 --share
+    --provider-physical-network datacentre --provider-segment 10 --project tenantA
 
 +---------------------------+--------------------------------------+
 | Field                     | Value                                |
@@ -70,8 +70,8 @@ openstack network create public --external --provider-network-type vlan \
 | mtu                       | 1496                                 |
 | name                      | public                               |
 | port_security_enabled     | True                                 |
-| project_id                | 353a3a8031fe48e79100031f58c29491     |
-| project_id                | 353a3a8031fe48e79100031f58c29491     |
+| project_id                | f1ab19b3cb164467ac7890f499726af0     |
+| project_id                | f1ab19b3cb164467ac7890f499726af0     |
 | provider:network_type     | vlan                                 |
 | provider:physical_network | datacentre                           |
 | provider:segmentation_id  | 10                                   |
