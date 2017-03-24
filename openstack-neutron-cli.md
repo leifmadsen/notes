@@ -435,3 +435,15 @@ openstack security group rule create 3e355f7b-8382-49a8-8cf5-eef90cb08682 \
 openstack security group rule create 3e355f7b-8382-49a8-8cf5-eef90cb08682 \
   --protocol tcp --dst-port 22:22 --src-ip 0.0.0.0/0
 ```
+# Keypair
+
+```
+openstack keypair create leifmadsen --public-key ~/.ssh/id_rsa.pub 
++-------------+-------------------------------------------------+
+| Field       | Value                                           |
++-------------+-------------------------------------------------+
+| fingerprint | f6:da:43:53:0f:26:2a:6e:cf:f3:ca:6d:62:2f:cb:66 |
+| name        | leifmadsen                                      |
+| user_id     | 789e96aeca654058bd1c6c8971bc5e95                |
++-------------+-------------------------------------------------+
+```
