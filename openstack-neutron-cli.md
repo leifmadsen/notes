@@ -311,6 +311,10 @@ openstack flavor list
 +--------------------------------------+-----------+------+------+-----------+-------+-----------+
 ```
 
+*********************
+Do following steps from user terminal
+*********************
+
 # Get User `openrc` File
 
 The following commands will be run as the user we created earlier. Login to the
