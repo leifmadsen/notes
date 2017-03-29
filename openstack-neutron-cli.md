@@ -89,7 +89,7 @@ openstack network create public --external --provider-network-type vlan \
 ```
 openstack subnet create sub_public --network public --dhcp \
     --allocation-pool start=192.168.10.64,end=192.168.10.127 \
-    --gateway 192.168.10.1 --subnet-range 192.168.10.0/24
+    --gateway 192.168.10.1 --subnet-range 192.168.10.0/24 --project tenantA
 
 +-------------------+--------------------------------------+
 | Field             | Value                                |
@@ -156,7 +156,8 @@ openstack network create private --project tenantA --internal
 ```
 openstack subnet create sub_private_tenantA --project tenantA \
     --network private --allocation-pool start=10.0.0.100,end=10.0.0.199 \
-    --dns-nameserver 8.8.8.8 --dns-nameserver 8.8.4.4 --subnet-range 10.0.0.0/24
+    --dns-nameserver 8.8.8.8 --dns-nameserver 8.8.4.4 \
+    --subnet-range 10.0.0.0/24 --dhcp
 +-------------------+--------------------------------------+
 | Field             | Value                                |
 +-------------------+--------------------------------------+
